@@ -1,11 +1,12 @@
-window.onload=function(){
+  
+    window.onload=function(){    
     var w= localStorage.getItem(localStorage.key(localStorage.length-1));
     var g=$('input').val(w);
     return currentWeather(g),
     $("#error").html("");
 };
 
-$(document).ready(function(){  
+$(document).ready(function(){ 
 $("#go").click(function(){
     return currentWeather();   
 });
@@ -128,4 +129,4 @@ var R =$('input').val(r);
     $(this).next().remove(),
     $(this).remove();           
 });
-
+var w= localStorage.getItem(localStorage.key(localStorage.length-1));
