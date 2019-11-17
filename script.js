@@ -16,7 +16,7 @@ city = $("#city").val();
 $("#error").empty();
 if (city !=""){       
     $.ajax({
-        url: "http://api.openweathermap.org/data/2.5/weather?q="+ city +"&units=imperial" + "&APPID=dea06d3acada1c5bcb9ddd9cc33fa188",
+        url: "https://api.openweathermap.org/data/2.5/weather?q="+ city +"&units=imperial" + "&APPID=dea06d3acada1c5bcb9ddd9cc33fa188",
         type:"GET",
         dataType: "jsonp",
         success: function(data){
@@ -30,7 +30,7 @@ if (city !=""){
             var API_KEY = 'dea06d3acada1c5bcb9ddd9cc33fa188';
             function getWeather(latitude, longtitude){
                 $.ajax({
-                    url: 'http://api.openweathermap.org/data/2.5/uvi?&dea06d3acada1c5bcb9ddd9cc33fa188',
+                    url: 'https://api.openweathermap.org/data/2.5/uvi?&dea06d3acada1c5bcb9ddd9cc33fa188',
                     data: {
                     lat: latitude,
                     lon: longtitude,
@@ -47,7 +47,7 @@ if (city !=""){
          
             function getForecast(){   //5-day forecast   
                 $.ajax({
-                    url: 'http:api.openweathermap.org/data/2.5/forecast/daily?q='+ city +"&units=imperial&cnt=5",
+                    url: 'https:api.openweathermap.org/data/2.5/forecast/daily?q='+ city +"&units=imperial&cnt=5",
                     data: {
                     APPID: API_KEY
                     },
