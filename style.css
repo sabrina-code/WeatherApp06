@@ -1,0 +1,283 @@
+body{
+    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+}
+h1{    
+    font-size: 6rem;
+    font-weight: 100;
+}
+h4, h5{    
+    width: 100%;
+    text-align: left;
+}
+#searchPanel h4{    
+    font-size: 1.5rem;
+    font-weight: 300;
+}
+#searchPanel h5{    
+    font-size: 1.2rem;
+    font-weight: 300;
+}
+:focus {
+    outline:0 !important;
+}
+footer{
+    background-color: #333;
+    height: 200px;
+    margin-top: 110px;
+}
+.footer{
+    text-align:center;    
+    color: white;
+    padding-top: 60px;
+    font-weight: 100;
+}
+.title {
+    font-size: 2.5rem;
+    text-align: center;
+    font-weight:200;
+    padding:10px;
+    background-color: rgb(113, 160, 230);
+    color: white;
+}
+#rightPanel {
+    display: inline-block;
+}
+#current{
+    padding:60px 10px;
+}
+#cityName{
+    font-size: 3rem;
+}
+.detail{
+    list-style: none;
+    float: left;
+    padding-top: 80px;
+}
+.date{
+    font-size: 18rem;
+}
+.list-group {
+    text-align: center;;
+}
+.card{
+    margin: 5px 0px;
+}
+#searchPanel {
+    display: block;
+    float: left;
+    margin: 60px 0px 30px 0px;
+}
+ul#cityList {
+    list-style: none;
+    font-size: 1.1rem;
+    padding-left: 0;
+    height: 300px;
+
+}
+ul#cityList li button{
+    margin: 5px 0;
+    padding:8px 10px;
+    border: 1px solid #d9d9d9;
+    border-right: 1px solid #f0f0f0;
+    background-color: #f0f0f0;
+    width:80%;
+    float:left;
+}
+ul#cityList li button:hover,
+ul#cityList li button:active:hover,
+ul#cityList li button.remove:hover,
+ul#cityList li button.remove:active:hover{
+    background-color: #333;
+    color: white;
+}
+ul#cityList li button.remove{
+    width:20%;
+    text-align: center;
+    border: 1px solid #d9d9d9;
+    border-left: 1px solid #f0f0f0;
+    background-color: #f0f0f0;
+    color:#c9c9c9;
+}
+#city {
+    font-size: 1.1rem;
+    padding: 7px;
+    width: 80%;
+}
+#go{
+    width:20%;
+    font-size: 1.1rem;
+    padding-top: 7px;
+    padding-bottom: 7px;
+}
+.form-group {
+    margin-bottom: 0 !important;
+    margin-top: 38px;
+}
+#error{
+    color:red;
+    height: 12px;
+    margin-bottom: 15px;
+    text-align: left;
+}
+#errorList{
+    color:rgb(87, 101, 230);
+    height: 12px;
+    margin-bottom: 15px;
+    text-align: left;
+}
+.detail{
+    font-weight: 400;
+    font-size:1.3rem;
+    height:60px !important;
+}
+.deg, .hum, .wind, .uv{
+    font-size: 1.8rem;
+}
+.country{
+    font-size: 3rem;
+}
+#curCityData{
+    margin: 80px 20px;
+    min-height:350px !important;
+    width: 100%;
+    border: 1px solid transparent;
+}
+#curCityData span{
+    font-size: 3rem;
+}
+#curCityData h1{
+    width: 100%;
+    text-align: left;
+}
+#curCityData h4 {
+    font-weight: 100;
+    margin-bottom: 40px;
+    font-size: 1.2rem;
+    width: 100%;
+    text-align: left;
+    /* color: #757575; */
+}
+#curCityData ul {
+    font-size: 2rem;
+    font-weight: 100;
+}
+ul#look{
+    width: 45%;
+    padding-left: 15px;
+
+}
+ul#look > li img{
+    width:120px;
+    height: auto;
+    margin-left: 20%;
+}
+ul#look > li span{
+    font-size: 1.8rem;
+    margin-left: 20px;
+}
+ul#look > li{
+    text-align:right;
+    display: block;
+    list-style: none;
+    font-size: 2.5rem;
+}
+#detail{
+    margin-top:12px;
+    float:right;
+}
+ul#detail > li{
+    text-align:left;
+    display: block;
+    list-style: none;;
+}
+#curForecast{
+    margin-left: 20px;
+    width: 100%;
+    margin: auto;
+}
+#forecastTitle h2{
+    font-weight: 300;
+    width: 100%;
+    text-align: left;
+    margin-left:55px;
+}
+#curForecast ul li{
+    list-style:none;
+    margin: auto;
+}
+#curForecast li img{
+    width: 90px;
+    height: auto;
+}
+#curForecast ul{
+    padding: 40px 10px 50px;
+    margin: 10px 2px;
+}
+.mainF{
+    font-size: 1.8rem;
+    font-weight: 200;
+    padding: 8px 0;
+}
+.dayF{
+    font-size: 1.3rem;
+    font-weight: 400;
+}
+@media (min-width: 1200px){
+.container {
+    text-align: center;
+    max-width: 1400px;
+}
+}
+@media (max-width: 991px){
+    #curCityData {
+        margin: 15px 15px 100px;
+    }
+    ul#look,
+    ul#detail {
+        width: 100%;
+        padding-left: 0px;
+    }
+    ul#look > li,
+    ul#detail > li {
+        text-align: center;
+    }
+    ul#look > li img {
+        margin:auto;
+    }
+    ul#look > li span{
+        margin-left: 0px;
+    }
+    #forecastTitle h2 {
+        margin-left: 0px;
+    }
+}
+@media (max-width: 767px){
+    h1{    
+        font-size: 5rem;
+        line-height: 40pxpx;
+    }
+    #curForecast{
+        padding-left: 15%;
+    }
+    #forecastTitle{
+        padding-left: 15%;
+        font-size: 1.1rem;
+    }
+}
+@media (max-width: 480px){
+    h1{    
+        font-size: 5rem;
+        line-height: 40pxpx;
+    }
+    #curForecast{
+        padding-left: 30%;
+    }
+    #forecastTitle{
+        font-size: 1.1rem;
+        padding-left: 5%;
+    }
+    #weatherPanel{
+        margin-right:0;
+        padding-right: 0;
+    }
+}

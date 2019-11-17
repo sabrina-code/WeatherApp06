@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Weather App</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css" >   
+</head>
+<body>
+    <div class="title">Weather Dashboard</div>
+        <div id="weather" class="container">
+            <div id="searchPanel" class="col-lg-3 col-sm-12 row">
+                <div class="form-group form-inline">
+                    <h4>Select a city: </h4>
+                    <input id="city" type="text" name="city" placeholder="Enter a city name" value="">
+                    <button id="go" class="btnGo btn-pimary">Go</button>                
+                </div>
+
+                <div id="error"></div> 
+                <div id="errorList"></div>    
+
+                <ul id="cityList">
+                    <h5>My ten search histories: </h5>
+                </ul> 
+                <div id="errorList"></div>                    
+            </div>
+
+            <div id="weatherPanel" class="col-lg-9 col-sm-12 row">
+                <div id="curCityData" class="row">
+                    <h1>Welcome to the <br><strong>Weather App</strong>.<span>Please enter a city name in the search field for the city's weather.</span></h1>
+                </div>
+                <div id="curCityUv" class="row"></div>
+                <div id="forecastTitle"></div>
+                <div id="curForecast" class="row">  </div>       
+            </div>
+
+            <div id="test" class="row"> 
+  
+        </div>
+    </div>
+    <footer class="footer">copyright &copy, 2019, Sabrina Fan</footer>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
