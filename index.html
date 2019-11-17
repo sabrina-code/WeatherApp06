@@ -12,6 +12,16 @@
 <body>
     <div class="title">Weather Dashboard</div>
         <div id="weather" class="container">
+                <div class="dropdown">
+                        <button class="dropbtn">Instruction</button>
+                        <div class="dropdown-content">
+                          <p>Enter a city name and hit go button.</p>
+                          <p>The City History List can save 10 searched city. Click on " ^ " to remove a city from the list.</p>
+                          <p>Click on the city tab in the City History List to get the weather of that city.</p>
+                          <p>App reloads with the last city searched. </p>
+                        </div>
+                      </div>
+
             <div id="searchPanel" class="col-lg-3 col-sm-12 row">
                 <div class="form-group form-inline">
                     <h4>Select a city: </h4>
@@ -28,7 +38,7 @@
                 <div id="errorList"></div>                    
             </div>
 
-            <div id="weatherPanel" class="col-lg-9 col-sm-12 row">
+            <div id="weatherPanel" class="col-lg-9 col-sm-12 row">                
                 <div id="curCityData" class="row">
                     <h1>Welcome to the <br><strong>Weather App</strong>.<span>Please enter a city name in the search field for the city's weather.</span></h1>
                 </div>

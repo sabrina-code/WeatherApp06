@@ -95,8 +95,8 @@ ul#cityList li button.remove{
     text-align: center;
     border: 1px solid #d9d9d9;
     border-left: 1px solid #f0f0f0;
-    background-color: #f0f0f0;
-    color:#c9c9c9;
+    background-color: #dad7d7;
+    color: #333;
 }
 #city {
     font-size: 1.1rem;
@@ -137,7 +137,7 @@ ul#cityList li button.remove{
     font-size: 3rem;
 }
 #curCityData{
-    margin: 80px 20px;
+    margin: 100px 20px;
     min-height:350px !important;
     width: 100%;
     border: 1px solid transparent;
@@ -222,6 +222,55 @@ ul#detail > li{
     font-size: 1.3rem;
     font-weight: 400;
 }
+
+.dropbtn {
+    background-color:orange;
+    color: white;
+    font-size:1.3rem;
+    border: none;
+    /* right: 20%; */
+    position: relative;
+    z-index: 2;
+    padding: 0 15px 4px;
+    
+  }
+  
+  .dropdown {
+    position: relative;
+    display: block;
+    right: 20%;
+    position: absolute;
+    width: 300px;
+  }
+ 
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    padding: 15px;
+}
+  
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {background-color: rgb(181, 171, 171);}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown:hover .dropbtn {
+    background-color: #333;
+}
+  </style>
 @media (min-width: 1200px){
 .container {
     text-align: center;
