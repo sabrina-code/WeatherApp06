@@ -48,7 +48,7 @@ if (city !=""){
          
             function getForecast(){   //5-day forecast   
                 $.ajax({
-                    url: 'https:api.openweathermap.org/data/2.5/forecast/daily?q='+ city +"&units=imperial&cnt=5",
+                    url: 'https://api.openweathermap.org/data/2.5/forecast/daily?q='+ city +"&units=imperial&cnt=5",
                     data: {
                     APPID: API_KEY
                     },
