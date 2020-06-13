@@ -40,7 +40,7 @@ var currentWeather = function (city) {
                         },
                         success: function (data) {
                             $("#detail").append(
-                                '<li> UV Index: ' + data + '</li>');
+                                '<li> UV Index: ' + data.value + '</li>');
                         }
                     });
                 }
@@ -101,7 +101,7 @@ var count = 0;
 var btnI;
 var historySearch = function (city) { //search history
     if (count < 10) {
-        $("#cityList").append('<li id="' + i + '" ><button type="submit" id="btn' + i + '" class="cityTab"  value= "' + city + '">' + city + '</button><button id="' + i + '" class="remove">^</button></li>');
+        $("#cityList").append('<li id="' + i + '" ><button type="submit" id="btn' + i + '" class="cityTab"  value= "' + city + '">' + city + '</button><button id="' + i + '" class="remove">X</button></li>');
         localStorage.setItem(i, city);
         btnI = "btn" + i;
         i++;
