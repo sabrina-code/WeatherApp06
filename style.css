@@ -1,5 +1,8 @@
 body{
-    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+    font-family: -apple-system,BlinkMacSystemFont,
+    "Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,
+    "Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+    background: black;
 }
 h1{    
     font-size: 6rem;
@@ -21,7 +24,7 @@ h4, h5{
     outline:0 !important;
 }
 footer{
-    background-color: #333;
+    background-color:black;
     height: 200px;
     margin-top: 110px;
 }
@@ -36,7 +39,7 @@ footer{
     text-align: center;
     font-weight:200;
     padding:10px;
-    background-color: rgb(113, 160, 230);
+    background-color:black;
     color: white;
 }
 #rightPanel {
@@ -77,7 +80,7 @@ ul#cityList {
 ul#cityList li button{
     margin: 5px 0;
     padding:8px 10px;
-    border: 1px solid #d9d9d9;
+    border: 1px solid #7d7979;
     border-right: 1px solid #f0f0f0;
     background-color: #f0f0f0;
     width:80%;
@@ -93,13 +96,14 @@ ul#cityList li button.remove:active:hover{
 ul#cityList li button.remove{
     width:20%;
     text-align: center;
-    border: 1px solid #d9d9d9;
+    border: 1px solid #7d7979;
     border-left: 1px solid #f0f0f0;
     background-color: #dad7d7;
     color: #333;
 }
 #city {
     font-size: 1.1rem;
+    border: 1px solid #7d7979;
     padding: 7px;
     width: 80%;
 }
@@ -108,6 +112,8 @@ ul#cityList li button.remove{
     font-size: 1.1rem;
     padding-top: 7px;
     padding-bottom: 7px;
+    border: 1px solid #7d7979;
+    border-left: 0;
 }
 .form-group {
     margin-bottom: 0 !important;
@@ -137,7 +143,7 @@ ul#cityList li button.remove{
     font-size: 3rem;
 }
 #curCityData{
-    margin: 100px 20px;
+    margin: 100px 20px 20px;
     min-height:350px !important;
     width: 100%;
     border: 1px solid transparent;
@@ -151,20 +157,17 @@ ul#cityList li button.remove{
 }
 #curCityData h4 {
     font-weight: 100;
-    margin-bottom: 40px;
     font-size: 1.2rem;
     width: 100%;
     text-align: left;
-    /* color: #757575; */
 }
 #curCityData ul {
-    font-size: 2rem;
+    font-size: 1.2rem;
     font-weight: 100;
 }
 ul#look{
     width: 45%;
     padding-left: 15px;
-
 }
 ul#look > li img{
     width:120px;
@@ -182,7 +185,7 @@ ul#look > li{
     font-size: 2.5rem;
 }
 #detail{
-    margin-top:12px;
+    margin-top:22px;
     float:right;
 }
 ul#detail > li{
@@ -197,32 +200,31 @@ ul#detail > li{
 }
 #forecastTitle h2{
     font-weight: 300;
-    width: 100%;
+    font-size: 1.5rem;
     text-align: left;
-    margin-left:55px;
+    margin-left: 35px;
 }
 #curForecast ul li{
     list-style:none;
     margin: auto;
 }
 #curForecast li img{
-    width: 90px;
+    width: 60px;
     height: auto;
 }
 #curForecast ul{
-    padding: 40px 10px 50px;
+    padding: 15px;
     margin: 10px 2px;
 }
 .mainF{
-    font-size: 1.8rem;
+    font-size: 1.5rem;
     font-weight: 200;
     padding: 8px 0;
 }
 .dayF{
-    font-size: 1.3rem;
+    font-size: 1rem;
     font-weight: 400;
 }
-
 .dropbtn {
     background-color:orange;
     color: white;
@@ -234,16 +236,13 @@ ul#detail > li{
     padding: 0 15px 4px;
     
   }
-  
-  .dropdown {
+.dropdown {
     position: relative;
     display: block;
-    right: 20%;
+    right: 15%;
     position: absolute;
     width: 300px;
-  }
- 
-
+}
 .dropdown-content {
     display: none;
     position: absolute;
@@ -253,24 +252,75 @@ ul#detail > li{
     z-index: 1;
     padding: 15px;
 }
-  
 .dropdown-content a {
     color: black;
     padding: 12px 16px;
     text-decoration: none;
     display: block;
 }
-
-.dropdown-content a:hover {background-color: rgb(181, 171, 171);}
-
+.dropdown-content a:hover {
+    background-color: rgb(181, 171, 171);
+}
 .dropdown:hover .dropdown-content {
     display: block;
 }
-
 .dropdown:hover .dropbtn {
     background-color: #333;
 }
-
+#weather{
+    margin-top: -100vh;
+    background: rgba(255,255,255,.7);
+    padding: 0;
+    border-radius: 0 0 10px 10px;
+}
+/******** CAROUSEL *********/
+.carousel-fade .carousel-item {
+	opacity: 0;
+	transition-duration: .6s;
+	transition-property: opacity;
+}
+.carousel-fade .carousel-item.active,
+.carousel-fade .carousel-item-next.carousel-item-left,
+.carousel-fade .carousel-item-prev.carousel-item-right {
+	opacity: 1;
+}
+.carousel-fade .active.carousel-item-left,
+.carousel-fade .active.carousel-item-right {
+	opacity: 0;
+}
+.carousel-fade .carousel-item-next,
+.carousel-fade .carousel-item-prev,
+.carousel-fade .carousel-item.active,
+.carousel-fade .active.carousel-item-left,
+.carousel-fade .active.carousel-item-prev {
+	transform: translateX(0);
+	transform: translate3d(0, 0, 0);
+}
+/*----- MAKE CAROUSEL A BACKGROUND --------*/
+.slider-block{
+	height:350px;
+	display:inline-block;
+}
+#carousel {
+	height:100%;
+}
+#carousel .carousel-inner{
+	height:100%;
+}
+#carousel .item{
+	background-repeat:no-repeat;
+	background-size:cover;
+	background-position:center center;
+	width:100%;
+	height:100%;
+}
+.carousel-inner {
+    z-index: -100;
+    background-size: cover;
+    height: 100vh;
+    overflow: scroll;
+}
+/********** RESPONSIVE ***********/
 @media (min-width: 1200px){
 .container {
     text-align: center;
@@ -278,55 +328,55 @@ ul#detail > li{
 }
 }
 @media (max-width: 991px){
-    #curCityData {
-        margin: 15px 15px 100px;
-    }
-    ul#look,
-    ul#detail {
-        width: 100%;
-        padding-left: 0px;
-    }
-    ul#look > li,
-    ul#detail > li {
-        text-align: center;
-    }
-    ul#look > li img {
-        margin:auto;
-    }
-    ul#look > li span{
-        margin-left: 0px;
-    }
-    #forecastTitle h2 {
-        margin-left: 0px;
-    }
+#curCityData {
+    margin: 15px 15px 100px;
+}
+ul#look,
+ul#detail {
+    width: 100%;
+    padding-left: 0px;
+}
+ul#look > li,
+ul#detail > li {
+    text-align: center;
+}
+ul#look > li img {
+    margin:auto;
+}
+ul#look > li span{
+    margin-left: 0px;
+}
+#forecastTitle h2 {
+    margin-left: 0px;
+}
 }
 @media (max-width: 767px){
-    h1{    
-        font-size: 5rem;
-        line-height: 40pxpx;
-    }
-    #curForecast{
-        padding-left: 15%;
-    }
-    #forecastTitle{
-        padding-left: 15%;
-        font-size: 1.1rem;
-    }
+h1{    
+    font-size: 5rem;
+    line-height: 40pxpx;
+}
+#curForecast{
+    padding-left: 15%;
+}
+#forecastTitle{
+    padding-left: 15%;
+    font-size: 1.1rem;
+}
 }
 @media (max-width: 480px){
-    h1{    
-        font-size: 5rem;
-        line-height: 40pxpx;
-    }
-    #curForecast{
-        padding-left: 30%;
-    }
-    #forecastTitle{
-        font-size: 1.1rem;
-        padding-left: 5%;
-    }
-    #weatherPanel{
-        margin-right:0;
-        padding-right: 0;
-    }
+h1{    
+    font-size: 5rem;
+    line-height: 40pxpx;
+}
+#curForecast{
+    padding-left: 30%;
+}
+#forecastTitle{
+    font-size: 1.1rem;
+    padding-left: 5%;
+}
+#weatherPanel{
+    margin-right:0;
+    padding-right: 0;
+}
 }
