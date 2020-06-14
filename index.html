@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- <meta http-equiv="X-UA-Compatible" content="ie=edge"> -->
     <title>Weather App</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
@@ -41,15 +41,15 @@
             <button class="dropbtn">Instruction</button>
             <div class="dropdown-content">
                 <p>Enter a city name to search.</p>
-                <p>The City History List saves up to ten searched cities. Click on " X " to remove a city from the list.
+                <p>The search history saves up to ten searched cities. Click on " X " to remove a city from the list. In
+                    a smaller device, these feature is disabled.
                 </p>
-                <p>Click on the city tab in the City History List to view the weather of that city again.</p>
-                <p>App reloads with the last searched city. </p>
-                <p>Refresh to remove all the searched city except the last one. </p>
+                <p>Click on the history list to view the weather of that city again in the current time.</p>
+                <p>Upon browser refreshing, only the last searched city will be shown.</p>
             </div>
         </div>
 
-        <div id="searchPanel" class="col-lg-3 col-md-4 col-sm-12 row">
+        <div id="searchPanel" class="col-lg-3 col-md-4 row">
             <div class="form-group form-inline">
                 <h5>Enter a city: </h5>
                 <input id="city" type="text" name="city" placeholder="Enter a city name" value="">
@@ -65,12 +65,11 @@
             <div id="errorList"></div>
         </div>
 
-        <div id="weatherPanel" class="col-lg-9 col-md-8 col-sm-12 row">
+        <div id="weatherPanel" class="col-lg-9 col-md-8 row">
             <div id="curCityData" class="row">
-                <h1>Welcome to the <br><strong>Weather App</strong>.<span>Please enter a city name in the search field
-                        for the city's weather.</span></h1>
+                <h1></h1>
             </div>
-            <div id="curCityUv" class="row"></div>
+            <!-- <div id="curCityUv" class="row"></div> -->
             <div id="forecastTitle"></div>
             <div id="curForecast" class="row"> </div>
         </div>
@@ -83,9 +82,9 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
         integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
         crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    <!-- <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-        crossorigin="anonymous"></script>
+        crossorigin="anonymous"></script> -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="script.js"></script>
     <Script>

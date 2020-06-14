@@ -40,7 +40,7 @@ var currentWeather = function (city) {
                         },
                         success: function (data) {
                             $("#detail").append(
-                                '<li> UV Index: ' + data.value + '</li>');
+                                '<li> Peak UV Index: ' + data.value + '</li>');
                         }
                     });
                 }
@@ -74,7 +74,6 @@ var currentWeather = function (city) {
             }
         });
     } else if ($(city) === null) {
-
         $("#error").html("City not found.");
     } else {
         $("#error").html("Please enter a city.");
@@ -125,8 +124,7 @@ $cityList.delegate(".remove", "click", function () { //locale storage
 $cityList.delegate(".cityTab", "click", function () { //locale storage
     var r = this.innerHTML;
     var R = $('input').val(r);
-    return currentWeather(R),
-        $(this).next().remove(),
-        $(this).remove();
+    return currentWeather(R)
+    // $(this).next().remove(),
+    // $(this).remove();
 });
-var w = localStorage.getItem(localStorage.key(localStorage.length - 1));
