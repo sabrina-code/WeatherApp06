@@ -82,11 +82,7 @@ const currentWeather = function (city) {
 };
 
 function currentCity(data) {
-<<<<<<< HEAD
     var date = new Date(data.dt * 1000);
-=======
-    let t = new Date(data.dt * 1000);
->>>>>>> 670ab679a7cb9de795d48a4f16f829575664209f
     return "<h1>" + data.name + '<span class="country"> ,' + data.sys.country + "</span></h1>" +
         "<h4>" + date + "</h4>" +
         '<ul id="look">' +
