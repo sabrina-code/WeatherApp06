@@ -82,9 +82,9 @@ var currentWeather = function (city) {
 };
 
 function currentCity(data) {
-    var t = new Date(data.dt * 1000);
+    var date = new Date(data.dt * 1000);
     return "<h1>" + data.name + '<span class="country"> ,' + data.sys.country + "</span></h1>" +
-        "<h4>" + t + "</h4>" +
+        "<h4>" + date + "</h4>" +
         '<ul id="look">' +
         '<li>' + data.weather[0].main + '<span> / ' + data.weather[0].description + "</span>" + "</li>" +
         '<li><img src="http://openweathermap.org/img/w/' + data.weather[0].icon + '.png"</li>' +
@@ -108,8 +108,9 @@ var historySearch = function (city) { //search history
         return count++;
     } else {
         $("#errorList").html('<p>Delete city to save in history.</p');
-        return;
+
     }
+    return;
 };
 
 var $cityList = $("#cityList");
