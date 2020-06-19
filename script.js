@@ -1,18 +1,19 @@
 
 window.onload = function () {
-    var w = localStorage.getItem(localStorage.key(localStorage.length - 1));
-    var g = $('input').val(w);
+    let w = localStorage.getItem(localStorage.key(localStorage.length - 1));
+    let g = $('input').val(w);
     return currentWeather(g),
         $("#error").html("");
 };
 
 $(document).ready(function () {
     $("#go").click(function () {
-        return currentWeather();
+        return currentWeather(),
+            $("#city").val('');
     });
 });
 
-var currentWeather = function (city) {
+const currentWeather = function (city) {
     city = $("#city").val();
     $("#error").empty();
     if (city != "") {
@@ -21,14 +22,14 @@ var currentWeather = function (city) {
             type: "GET",
             dataType: "jsonp",
             success: function (data) {
-                var curCityData = currentCity(data);
+                const curCityData = currentCity(data);
                 $("#curCityData").html(curCityData);
 
                 historySearch(city);  //history            
 
-                var latitude = data.coord.lat;   //UV index
-                var longtitude = data.coord.lon;
-                var API_KEY = 'dea06d3acada1c5bcb9ddd9cc33fa188';
+                const latitude = data.coord.lat;   //UV index
+                const longtitude = data.coord.lon;
+                const API_KEY = 'dea06d3acada1c5bcb9ddd9cc33fa188';
                 function getWeather(latitude, longtitude) {
                     $.ajax({
                         url: 'https://api.openweathermap.org/data/2.5/uvi?&dea06d3acada1c5bcb9ddd9cc33fa188',
@@ -40,7 +41,7 @@ var currentWeather = function (city) {
                         },
                         success: function (data) {
                             $("#detail").append(
-                                '<li> UV Index: ' + data.value + '</li>');
+                                '<li> Peak UV Index: ' + data.value + '</li>');
                         }
                     });
                 }
@@ -74,7 +75,6 @@ var currentWeather = function (city) {
             }
         });
     } else if ($(city) === null) {
-
         $("#error").html("City not found.");
     } else {
         $("#error").html("Please enter a city.");
@@ -82,7 +82,11 @@ var currentWeather = function (city) {
 };
 
 function currentCity(data) {
+<<<<<<< HEAD
     var date = new Date(data.dt * 1000);
+=======
+    let t = new Date(data.dt * 1000);
+>>>>>>> 670ab679a7cb9de795d48a4f16f829575664209f
     return "<h1>" + data.name + '<span class="country"> ,' + data.sys.country + "</span></h1>" +
         "<h4>" + date + "</h4>" +
         '<ul id="look">' +
@@ -96,10 +100,10 @@ function currentCity(data) {
         '</ul>';
 }
 
-var i = 0;
-var count = 0;
-var btnI;
-var historySearch = function (city) { //search history
+let i = 0;
+let count = 0;
+let btnI;
+let historySearch = function (city) { //search history
     if (count < 10) {
         $("#cityList").append('<li id="' + i + '" ><button type="submit" id="btn' + i + '" class="cityTab"  value= "' + city + '">' + city + '</button><button id="' + i + '" class="remove">X</button></li>');
         localStorage.setItem(i, city);
@@ -113,21 +117,20 @@ var historySearch = function (city) { //search history
     return;
 };
 
-var $cityList = $("#cityList");
+let $cityList = $("#cityList");
 $cityList.delegate(".remove", "click", function () { //locale storage
-    var $li = $(this).closest("li");
+    let $li = $(this).closest("li");
     $li.remove();
-    var key = $(this).attr("id");
+    let key = $(this).attr("id");
     $("#errorList").empty();
     localStorage.removeItem(key);
     return count--;
 });
 
 $cityList.delegate(".cityTab", "click", function () { //locale storage
-    var r = this.innerHTML;
-    var R = $('input').val(r);
-    return currentWeather(R),
-        $(this).next().remove(),
-        $(this).remove();
+    let r = this.innerHTML;
+    let R = $('input').val(r);
+    return currentWeather(R)
+    // $(this).next().remove(),
+    // $(this).remove();
 });
-var w = localStorage.getItem(localStorage.key(localStorage.length - 1));

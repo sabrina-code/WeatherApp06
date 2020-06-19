@@ -4,7 +4,7 @@
 
 >A simple Weather App to let a user find the city's weather and its five-day forecast using Openweather Map API. 
 * Enter a city name and hit go button to get a city's weather forecast.
-*  One can save up ten cities searched. The user can modify the City History List by clicking on " ^ " button to remove it for more cities to be added.
+*  One can save up ten cities searched. The user can modify the City History List by clicking on " X " button to remove it for more cities to be added.
 * Clicking on the tab of City History List brings the user to the weather of that city.
 * Every time the browser closes and reopens, the app loads the last city searched. 
 
