@@ -8,6 +8,8 @@
 * Click on the history list to view the weather of that city again in the current time.
 * Upon browser refreshing, only the last searched city will be shown.
 
+https://myweatherforcast.herokuapp.com/
+
 ## Technology and Skills
 
 * HTML5
