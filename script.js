@@ -1,9 +1,10 @@
 
 window.onload = function () {
-    let w = localStorage.getItem(localStorage.key(localStorage.length - 1));
-    let g = $('input').val(w);
-    return currentWeather(g),
-        $("#error").html("");
+    let localStorageItems = localStorage.getItem(localStorage.key(localStorage.length - 1));
+    let inquired = $('input').val(localStorageItems);
+    return currentWeather(inquired)
+    // ,
+    //     $("#error").html("");
 };
 
 $(document).ready(function () {
@@ -13,7 +14,7 @@ $(document).ready(function () {
     });
 });
 
-const currentWeather = function (city) {
+const currentWeather = city => {
     city = $("#city").val();
     $("#error").empty();
     if (city != "") {
@@ -81,7 +82,7 @@ const currentWeather = function (city) {
     }
 };
 
-function currentCity(data) {
+const currentCity = data => {
     var date = new Date(data.dt * 1000);
     return "<h1>" + data.name + '<span class="country"> ,' + data.sys.country + "</span></h1>" +
         "<h4>" + date + "</h4>" +
@@ -96,14 +97,15 @@ function currentCity(data) {
         '</ul>';
 }
 
+//Local Storage
 let i = 0;
 let count = 0;
-let btnI;
-let historySearch = function (city) { //search history
+let btnId;
+const historySearch = city => {
     if (count < 10) {
         $("#cityList").append('<li id="' + i + '" ><button type="submit" id="btn' + i + '" class="cityTab"  value= "' + city + '">' + city + '</button><button id="' + i + '" class="remove">X</button></li>');
         localStorage.setItem(i, city);
-        btnI = "btn" + i;
+        btnId = "btn" + i;
         i++;
         return count++;
     } else {
@@ -114,7 +116,7 @@ let historySearch = function (city) { //search history
 };
 
 let $cityList = $("#cityList");
-$cityList.delegate(".remove", "click", function () { //locale storage
+$cityList.delegate(".remove", "click", function () {
     let $li = $(this).closest("li");
     $li.remove();
     let key = $(this).attr("id");
@@ -123,10 +125,8 @@ $cityList.delegate(".remove", "click", function () { //locale storage
     return count--;
 });
 
-$cityList.delegate(".cityTab", "click", function () { //locale storage
-    let r = this.innerHTML;
-    let R = $('input').val(r);
-    return currentWeather(R)
-    // $(this).next().remove(),
-    // $(this).remove();
+$cityList.delegate(".cityTab", "click", function () {
+    let historyBtnValue = this.innerHTML;
+    let searchFromHistory = $('input').val(historyBtnValue);
+    return currentWeather(searchFromHistory)
 });
