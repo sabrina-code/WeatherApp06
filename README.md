@@ -11,9 +11,9 @@
 
 https://myweatherforcast.herokuapp.com/
 
-![profile](https://github.com/sabrina-code/weatherapp06/blob/master/weather1.jpg)
+![profile](https://github.com/sabrina-code/weatherapp06/blob/master/weathera.jpg)
 
-![profile](https://github.com/sabrina-code/weatherapp06/blob/master/weather2.jpg)
+![profile](https://github.com/sabrina-code/weatherapp06/blob/master/weatherb.jpg)
 
 ## Technology and Skills
 
